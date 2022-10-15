@@ -1,14 +1,5 @@
 const path = require("path");
 
-module: {
-    rules: [
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ]
-  }
-
 module.exports = {
     entry: "./src/js/index.js",
     output: {
@@ -16,4 +7,12 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     mode: "development",
+    module: {
+        rules: [
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
+          },
+        ]
+      }
 };
